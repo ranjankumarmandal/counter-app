@@ -5,6 +5,8 @@ Hello visitor, this is my react application, a counter-application. Feel free to
 ## Step to create React application –
 
 1. Open terminal at related location
-2. npx create-react-app <app-name>
+2. npx create-react-app app-name
 3. Develop your application using vs code editor
 4. npm start
+
+Note - Point number 2 means (create a react application using cmd) and 4 means (Run the localhost server using cmd)
