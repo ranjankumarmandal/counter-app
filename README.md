@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello visitor, this is my react application, a counter-application. Feel free to use this. And kindly let me know if you have some scalable and more efficient approach to design the same. Happy Coding !! :)
 
 ## Available Scripts
 
