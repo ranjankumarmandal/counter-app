@@ -10,3 +10,5 @@ Hello visitor, this is my react application, a counter-application. Feel free to
 4. npm start
 
 Note - Point number 2 means (create a react application using cmd) and 4 means (Run the localhost server using cmd)
+
+Want to connect with me, go to my linkedin account - Ranjan(https://www.linkedin.com/in/ranjan-kumar-m-818367158/)
