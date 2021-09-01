@@ -5,6 +5,11 @@ class Counter extends Component {
     count: 1,
   };
 
+  // constructor() {
+  //   super();
+  //   this.handleIncreament = this.handleIncreament.bind(this);
+  // }
+
   render() {
     return (
       <div>
@@ -30,9 +35,10 @@ class Counter extends Component {
     return count === 0 ? "Zero" : count;
   }
 
-  handleIncreament() {
-    console.log("Increament button clicked !!");
-  }
+  // Event handlers in react call as method invocation which by default return 'window' object. But as 'use strict' is enabled in react by default, hence this will return 'undefined' object. So to resolve this issue, we have used here the arrow function
+  handleIncreament = () => {
+    console.log("Increament button clicked !!" + this.state.count);
+  };
 }
 
 export default Counter;
