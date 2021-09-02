@@ -15,7 +15,7 @@ class Counter extends Component {
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={this.handleIncreament}
+          onClick={() => this.handleIncreament(product)}
           className="btn btn-secondary btn-sm"
         >
           Increament
@@ -36,7 +36,8 @@ class Counter extends Component {
   }
 
   // Event handlers in react call as method invocation which by default return 'window' object. But as 'use strict' is enabled in react by default, hence this will return 'undefined' object. So to resolve this issue, we have used here the arrow function.
-  handleIncreament = () => {
+  handleIncreament = (product) => {
+    console.log(product);
     this.setState({ count: this.state.count + 1 });
   };
 }
