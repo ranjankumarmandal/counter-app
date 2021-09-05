@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     count: this.props.value, // passing value from counters component to this component
-  };
+  }; // Note – props vs state – props include a data that we give to a component and state includes data that is local or private to that component
 
   // constructor() {
   //   super();
@@ -36,6 +36,12 @@ class Counter extends Component {
           className="btn btn-secondary btn-sm"
         >
           Increament
+        </button>
+        <button
+          onClick={this.props.onDelete}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
         </button>
       </div>
     );
