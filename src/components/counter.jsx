@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  state = {
-    count: this.props.counter.value, // passing value from counters component to this component
-  }; // Note – props vs state – props include a data that we give to a component and state includes data that is local or private to that component
+  // Note – props vs state – props include a data that we give to a component and state includes data that is local or private to that component
 
   // constructor() {
   //   super();
@@ -12,27 +10,23 @@ class Counter extends Component {
 
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
-    classes += this.state.count === 0 ? "warning" : "primary";
+    classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }
 
   formatCount() {
-    let { count } = this.state;
-    return count === 0 ? "Zero" : count;
+    let { value } = this.props.counter;
+    return value === 0 ? "Zero" : value;
   }
 
   // Event handlers in react call as method invocation which by default return 'window' object. But as 'use strict' is enabled in react by default, hence this will return 'undefined' object. So to resolve this issue, we have used here the arrow function.
-  handleIncreament = () => {
-    //console.log(product);
-    this.setState({ count: this.state.count + 1 });
-  };
 
   render() {
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={() => this.handleIncreament()}
+          onClick={() => this.props.onIncreament(this.props.counter.id)}
           className="btn btn-secondary btn-sm"
         >
           Increament
