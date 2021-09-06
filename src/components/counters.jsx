@@ -21,7 +21,7 @@ class Counters extends Component {
 
   handleIncreament = (counterId) => {
     const counter = this.state.counters.filter((m) => m.id === counterId); // object that's value will be incremented
-    const counters = [...this.state.counters];
+    const counters = this.state.counters;
     const index = counters.indexOf(counter[0]); // no issues, counter is array, contains only one object as its value
     counters[index].value = counter[0].value;
     counters[index].value++;
